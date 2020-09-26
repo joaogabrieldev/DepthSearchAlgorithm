@@ -1,7 +1,7 @@
-import Profundidade from './Profundidade'
-import Estado from './Estado'
+import Depth from './Depth'
+import State from './State'
 
-const labirinto = [
+const lab = [
     ['#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'],
     ['#', '0', '0', '0', '#', '0', '0', '0', '#', '0', '0', '#'],
     ['#', '#', '#', '0', '0', '0', '#', '0', '0', '0', '#', '#'],
@@ -16,8 +16,8 @@ const labirinto = [
     ['#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '0', '#'],
 ]
 
-const profundidade = new Profundidade()
-const estadoInicial = new Estado(1,1)
-const estadoFinal = new Estado(labirinto.length-1, labirinto.length-2)
+const depth = new Depth()
+const state_start = new State(1,1)
+const state_final = new State(lab.length-1, lab.length-2)
 
-profundidade.busca(estadoInicial, estadoFinal, labirinto)
+depth.search(state_start, state_final, lab)
